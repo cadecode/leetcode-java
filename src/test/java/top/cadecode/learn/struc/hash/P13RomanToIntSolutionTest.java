@@ -1,6 +1,6 @@
-package cade.struc.hash;
+package top.cadecode.learn.struc.hash;
 
-import cade.AppTest;
+import top.cadecode.learn.AppTest;
 import org.junit.Test;
 
 public class P13RomanToIntSolutionTest extends AppTest {

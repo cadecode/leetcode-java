@@ -1,9 +1,8 @@
-package cade.struc.hash;
+package top.cadecode.learn.struc.hash;
 
-import cade.AppTest;
+import top.cadecode.learn.AppTest;
 import org.junit.Test;
 
-import java.util.HashMap;
 import java.util.List;
 
 public class P30FindSubstringSolutionTest extends AppTest {

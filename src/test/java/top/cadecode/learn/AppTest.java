@@ -1,4 +1,4 @@
-package cade;
+package top.cadecode.learn;
 
 import org.junit.Test;
 import org.slf4j.Logger;
