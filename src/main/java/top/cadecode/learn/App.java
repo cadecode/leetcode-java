@@ -1,4 +1,4 @@
-package cade;
+package top.cadecode.learn;
 
 /**
  * Hello world!

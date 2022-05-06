@@ -1,4 +1,4 @@
-package cade.struc.hash;
+package top.cadecode.learn.struc.hash;
 
 import java.util.*;
 

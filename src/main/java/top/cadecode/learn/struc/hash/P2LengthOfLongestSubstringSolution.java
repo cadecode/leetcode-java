@@ -1,9 +1,7 @@
-package cade.struc.hash;
+package top.cadecode.learn.struc.hash;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class P2LengthOfLongestSubstringSolution {
     public int lengthOfLongestSubstring(String s) {
