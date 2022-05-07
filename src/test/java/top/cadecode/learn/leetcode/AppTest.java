@@ -1,4 +1,4 @@
-package top.cadecode.learn;
+package top.cadecode.learn.leetcode;
 
 import org.junit.Test;
 import org.slf4j.Logger;
