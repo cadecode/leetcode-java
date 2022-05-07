@@ -1,4 +1,4 @@
-package top.cadecode.learn.struc.hash;
+package top.cadecode.learn.leetcode.struc.hash;
 
 import java.util.HashMap;
 import java.util.HashSet;

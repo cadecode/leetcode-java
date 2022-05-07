@@ -1,6 +1,6 @@
-package top.cadecode.learn.struc.hash;
+package top.cadecode.learn.leetcode.struc.hash;
 
-import top.cadecode.learn.AppTest;
+import top.cadecode.learn.leetcode.AppTest;
 import org.junit.Test;
 
 /**

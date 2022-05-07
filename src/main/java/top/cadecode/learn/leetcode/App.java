@@ -1,4 +1,4 @@
-package top.cadecode.learn;
+package top.cadecode.learn.leetcode;
 
 /**
  * Hello world!
