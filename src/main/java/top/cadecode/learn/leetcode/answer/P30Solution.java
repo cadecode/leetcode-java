@@ -2,7 +2,7 @@ package top.cadecode.learn.leetcode.answer;
 
 import java.util.*;
 
-public class P30FindSubstringSolution {
+public class P30Solution {
 
     public List<Integer> findSubstring(String s, String[] words) {
         int len = s.length();

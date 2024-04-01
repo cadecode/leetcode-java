@@ -3,7 +3,7 @@ package top.cadecode.learn.leetcode.answer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P1TwoSumSolution {
+public class P1Solution {
     public int[] twoSum(int[] nums, int target) {
         int len = nums.length;
         // 使用一个 map 缓存遍历的元素及下标

@@ -3,7 +3,7 @@ package top.cadecode.learn.leetcode.answer;
 import java.util.HashMap;
 import java.util.Map;
 
-public class P2LengthOfLongestSubstringSolution {
+public class P2Solution {
     public int lengthOfLongestSubstring(String s) {
         int len = s.length();
         // 处理特殊情况：空串和一个字符

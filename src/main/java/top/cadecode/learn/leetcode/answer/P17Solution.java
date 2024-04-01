@@ -2,7 +2,7 @@ package top.cadecode.learn.leetcode.answer;
 
 import java.util.*;
 
-public class P17LetterCombinationsSolution {
+public class P17Solution {
     private final Map<Character, List<String>> btnMap = new HashMap<>();
 
     {

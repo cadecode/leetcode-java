@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-public class P36IsValidSudokuSolution {
+public class P36Solution {
     public boolean isValidSudoku(char[][] board) {
         // 初始化列容器
         Map<Integer, Set<Character>> colMap = new HashMap<>();
