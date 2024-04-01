@@ -1,7 +1,7 @@
 package top.cadecode.learn.leetcode.demo.tree;
 
 /**
- * 树节点
+ * 二叉树树节点
  *
  * @author Cade Li
  * @since 2024/4/1
@@ -14,4 +14,7 @@ public class TreeNode {
 
     public TreeNode right;
 
+    public TreeNode(int value) {
+        this.value = value;
+    }
 }
