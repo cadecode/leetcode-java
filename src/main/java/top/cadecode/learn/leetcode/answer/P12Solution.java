@@ -3,7 +3,7 @@ package top.cadecode.learn.leetcode.answer;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class P12IntToRomanSolution {
+public class P12Solution {
 
     // 存入罗马数字对应关系
     Map<Integer, String> rmMap = new LinkedHashMap<>();

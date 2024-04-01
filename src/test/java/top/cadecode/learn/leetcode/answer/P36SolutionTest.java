@@ -2,14 +2,13 @@ package top.cadecode.learn.leetcode.answer;
 
 import top.cadecode.learn.leetcode.AppTest;
 import org.junit.Test;
-import top.cadecode.learn.leetcode.answer.P36IsValidSudokuSolution;
 
 /**
  * @author Cade Li
  * @date 2021/8/12
  * @description ToDo
  */
-public class P36IsValidSudokuSolutionTest extends AppTest {
+public class P36SolutionTest extends AppTest {
 
     @Test
     public void test() {
@@ -33,7 +32,7 @@ public class P36IsValidSudokuSolutionTest extends AppTest {
                 , {'.', '.', '.', '4', '1', '9', '.', '.', '5'}
                 , {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
 
-        boolean validSudoku = new P36IsValidSudokuSolution().isValidSudoku(board2);
+        boolean validSudoku = new P36Solution().isValidSudoku(board2);
         log.info("validSudoku: {}", validSudoku);
     }
 }
