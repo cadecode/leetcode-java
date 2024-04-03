@@ -8,14 +8,19 @@ package top.cadecode.learn.leetcode.demo.list;
  */
 public class ListNode {
 
-    public ListNode(int val) {
-        this.val = val;
-    }
-
     public int val;
 
     public ListNode prev;
 
     public ListNode next;
 
+    public ListNode(int val) {
+        this.val = val;
+    }
+
+    public ListNode(int val, ListNode prev, ListNode next) {
+        this.val = val;
+        this.prev = prev;
+        this.next = next;
+    }
 }
