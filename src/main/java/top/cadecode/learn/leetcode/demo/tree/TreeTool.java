@@ -247,4 +247,47 @@ public class TreeTool {
         return true;
     }
 
+
+    /**
+     * 找两节点在树上的公共祖先
+     */
+    public TreeNode lca(TreeNode root, TreeNode p, TreeNode q) {
+        Map<TreeNode, TreeNode> parentMap = new HashMap<>();
+        // 根节点父级设置为 null
+        parentMap.put(root, null);
+        // 递归填充其他节点的父级关系
+        lcaProcess(root, parentMap);
+        Set<TreeNode> set = new HashSet<>();
+        while (p != null) {
+            set.add(p);
+            p = parentMap.get(p);
+        }
+        while (q != null) {
+            if (set.contains(q)) {
+                return q;
+            }
+            q = parentMap.get(q);
+        }
+        return null;
+    }
+
+    public void lcaProcess(TreeNode root, Map<TreeNode, TreeNode> map) {
+        if (root == null) {
+            return;
+        }
+        lcaProcess(root.left, map);
+        lcaProcess(root.right, map);
+        map.put(root.left, root);
+        map.put(root.right, root);
+    }
+
+    public TreeNode lca2(TreeNode root, TreeNode p, TreeNode q) {
+        if (root == null || root == p || root == q) return root;
+        TreeNode left = lca2(root.left, p, q);
+        TreeNode right = lca2(root.right, p, q);
+        if (left == null && right == null) return null;
+        if (left == null) return right;
+        if (right == null) return left;
+        return root;
+    }
 }
