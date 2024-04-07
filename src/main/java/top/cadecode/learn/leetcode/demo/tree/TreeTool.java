@@ -38,6 +38,91 @@ public class TreeTool {
     }
 
     /**
+     * 非递归前序遍历
+     * 一个栈，先压入父，再取出父（打印），再压右左孩子
+     * 得到中左右
+     */
+    public static void firstOrderPrintNoRecur(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            // 先处理父节点
+            System.out.print(node.val + " ");
+            // 先压入右孩子，再压左孩子
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+    }
+
+    /**
+     * 非递归中序遍历
+     * 一个栈，先压入父，再持续找到左孩子，压栈
+     * 取出一个节点（打印）
+     * 在该节点右子树上执行上述过程
+     */
+    public static void middleOrderPrintNoRecur(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack = new Stack<>();
+        stack.add(root);
+        while (root.left != null) {
+            stack.add(root.left);
+            root = root.left;
+        }
+        while (!stack.isEmpty()) {
+            TreeNode node = stack.pop();
+            System.out.print(node.val + " ");
+            if (node.right != null) {
+                node = node.right;
+                stack.add(node);
+                while (node.left != null) {
+                    stack.add(node.left);
+                    node = node.left;
+                }
+            }
+        }
+    }
+
+    /**
+     * 非递归后序遍历
+     * 第一个栈，先压入父，再取出父（打印），入第二个找，再压左右孩子
+     * 得到中右左
+     * 再利用第二个栈反转，得到左右中
+     */
+    public static void lastOrderPrintNoRecur(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<TreeNode> stack1 = new Stack<>();
+        Stack<TreeNode> stack2 = new Stack<>();
+        stack1.add(root);
+        while (!stack1.isEmpty()) {
+            TreeNode node = stack1.pop();
+            stack2.add(node);
+            // 先压入左孩子，再压右孩子
+            if (node.left != null) {
+                stack1.push(node.left);
+            }
+            if (node.right != null) {
+                stack1.push(node.right);
+            }
+        }
+        while (!stack2.isEmpty()) {
+            TreeNode node = stack2.pop();
+            System.out.print(node.val + " ");
+        }
+    }
+
+    /**
      * 层序遍历
      * 宽度优先遍历
      */
@@ -231,9 +316,11 @@ public class TreeTool {
             if (currNode.left == null && currNode.right != null) {
                 return false;
             }
+            // 已经出现不双全，但又找到有孩子的节点
             if (onlyLeft && currNode.left != null) {
                 return false;
             }
+            // 出现孩子不双全，标记 onlyLeft
             if (currNode.left == null || currNode.right == null) {
                 onlyLeft = true;
             }
