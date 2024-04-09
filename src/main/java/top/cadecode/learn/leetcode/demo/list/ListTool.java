@@ -20,6 +20,19 @@ public class ListTool {
         System.out.println("null");
     }
 
+    /**
+     * 获取 两个无环链表 相交点
+     */
+    public ListNode getPublicNodeNoLoop(ListNode headA, ListNode headB) {
+        if (headA == null || headB == null) return null;
+        ListNode pA = headA, pB = headB;
+        while (pA != pB) {
+            pA = pA == null ? headB : pA.next;
+            pB = pB == null ? headA : pB.next;
+        }
+        return pA;
+    }
+
     public static boolean isLoop(ListNode head) {
         ListNode s = head;
         ListNode q = head;
@@ -44,13 +57,11 @@ public class ListTool {
             if (s == q) {
                 // 慢2号 重头出发，s 也开始走，二者必相遇在入环节点
                 ListNode s2 = head;
-                while (s2 != null) {
+                while (s2 != s) {
                     s2 = s2.next;
                     s = s.next;
-                    if (s2 == s) {
-                        return s;
-                    }
                 }
+                return s;
             }
         }
         return null;
