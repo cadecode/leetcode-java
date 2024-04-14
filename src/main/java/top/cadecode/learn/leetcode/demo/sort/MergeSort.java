@@ -15,7 +15,8 @@ public class MergeSort {
     public static void process(int[] arr, int l, int r) {
         if (l == r) return;
         // 计算中点，>> 优先级低
-        int m = l + ((r - l) >> 2);
+        int m = l + ((r - l) >> 1);
+        System.out.println(m);
         process(arr, l, m);
         process(arr, m + 1, r);
         merge(arr, l, m, r);
