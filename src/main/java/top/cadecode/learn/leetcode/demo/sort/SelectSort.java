@@ -10,13 +10,14 @@ public class SelectSort {
     public static void sort(int[] arr) {
         if (arr == null || arr.length < 2) return;
 
-        // 每次选择最小值下标，交换到前面
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < arr.length; j++) {
-                minIndex = arr[j] < arr[minIndex] ? j : minIndex;
+                minIndex = arr[j] > arr[minIndex] ? minIndex : j;
             }
-            SortTool.swap(arr, i, minIndex);
+            if (minIndex != i) {
+                SortTool.swap(arr, i, minIndex);
+            }
         }
     }
 }
